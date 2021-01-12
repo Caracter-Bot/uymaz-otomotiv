@@ -1,0 +1,589 @@
+body {
+  background: #fff;
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+}
+
+::selection{
+  background-color: rgb(248, 216, 157);
+}
+
+a {
+  color: #FF9800;
+  transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Başlık */
+
+#baslik {
+  padding: 20px 0;
+  height: 84px;
+  transition: all 0.5s;
+  z-index: 997;
+  background: #fff;
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+}
+
+#baslik #logo h1 {
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-family: arial;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+#headbasliker #logo h1 i {
+    float: left;
+    margin: 4px 10px 4px 0;
+    font-size: 34px;
+    color: #000;
+}
+#baslik #logo h1 span {
+    font-size: 12px;
+    display: block;
+}
+#baslik #logo h1 a {
+  color: #FF9800;
+  line-height: 1;
+  display: inline-block;
+}
+
+#baslik #logo h1 a span {
+  color: #000;
+}
+
+#baslik #logo img {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #baslik {
+    padding: 20px 0;
+    height: 74px;
+  }
+  #baslik #logo h1 {
+    font-size: 34px;
+  }
+  #baslik #logo img {
+    max-height: 40px;
+  }
+}
+
+.section-baslik {
+  margin: 0 auto 40px;
+  width: 82%;
+}
+
+.section-baslik h2 {
+  font-size: 32px;
+  color: #FF9800;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 20px;
+  /* display: inline-block; */
+  text-align: center;
+}
+
+.section-baslik h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 62px;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  border-top: #FF9800 solid 2px;
+  right: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section-baslik p {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+/* Başlangıç */
+
+#intro {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+  background-size: cover;
+}
+
+#intro img{
+  width: 100%;
+  height: 90vh;
+}
+
+#intro .intro-content {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 14%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  z-index: 9;
+}
+
+#intro .intro-content h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: normal;
+  text-align: left;
+}
+
+#intro .intro-content h2 span {
+  color: #FF9800;
+  text-align: left;
+  font-size: 64px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  #intro .intro-content h2 {
+    font-size: 22px;
+    padding: 0;
+  }
+}
+
+#intro .intro-content .btn-get-started, #intro .intro-content .btn-projects {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 32px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 0;
+  color: #fff;
+}
+
+#intro .intro-content .btn-get-started {
+  background: #FF9800;
+  border: 2px solid #FF9800;
+  background: transparent !important;
+  color: #FF9800;
+}
+
+#intro .intro-content .btn-get-started:hover {
+  color: #fff;
+  border: 2px solid #fff !important;
+}
+
+/* Galeri */
+
+#galeri {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,152,0,0.6997191182683022) 76%, rgba(255,152,0,1) 100%);
+  padding: 90px 50px;
+  color: #3a3a3a;
+  margin-bottom: 6vh;
+}
+
+#galeri .galeri-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+#galeri .galeri-item:hover .galeri-info {
+  display: block;
+}
+#galeri .galeri-item {
+  overflow: hidden;
+  position: relative;
+  padding: 0;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#galeri .galeri-item h2 {
+  color: #ffffff;
+  font-size: 16px;
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: 700;
+  border: 1px solid #FF9800;
+  padding: 25px;
+}
+
+#galeri .galeri-item img {
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+  width: 100%;
+  height: 24vh;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#galeri .galeri-item:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+#galeri .galeri-item:hover .galeri-overlay {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#galeri .galeri-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* Satış */
+
+#trainers { 
+  padding-bottom: 40px; 
+}
+
+#trainers .trainer-item {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+#trainers .trainer-item img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#trainers .trainer-item span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #FF9800;
+  display: inline-block;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+#trainers a{
+  color: #FF9800;
+  border: 1px solid #FF9800;
+  padding: 10px;
+  transition: all 0.5s;
+  margin-left: 24px;
+}
+
+#trainers a:hover{
+  color: #fff;
+  background-color: #FF9800;
+}
+
+#trainers .trainer-item h4 {
+  font-size: 19px;
+  font-weight: 600;
+  color: #232d39;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+#trainers .trainer-item p {
+  margin-bottom: 20px;
+}
+
+/* Son */
+
+#footer {
+  background: #FF9800;
+  padding: 0 0 30px 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+  color: #ffffffad;
+}
+
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  color: #ffffff85;
+  margin-top: 8px;
+}
+
+#footer .credits a {
+  color: #6c757d;
+}
+.owl-carousel .owl-item img {
+    display: block;
+    width: auto;
+    height: 70px;
+    margin: 0 auto;
+}
+
+/* Menü */
+
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+/* Menü Okları */
+.sf-arrows .sf-with-ul {
+  padding-right: 22px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 8px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+/* Menü Yer Değiştirme */
+
+#nav-menu-container {
+  float: right;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  #nav-menu-container {
+    display: none;
+  }
+}
+
+/* Menü Stillendirme */
+
+.nav-menu a {
+  padding: 10px 14px;
+  text-decoration: none;
+  display: inline-block;
+  color: #555;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  outline: none;
+}
+
+.nav-menu li:hover > a, .nav-menu > .menu-active > a {
+  color: #fff;
+  background: #ffb343;
+}
+
+.nav-menu > li {
+  margin-left: 10px;
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 0;
+  padding: 10px;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  background: #fff;
+}
+
+.nav-menu ul li {
+  transition: 0.3s;
+}
+
+.nav-menu ul li a {
+  padding: 10px;
+  color: #333;
+  transition: 0.3s;
+  display: block;
+  font-size: 13px;
+  text-transform: none;
+}
+
+.nav-menu ul li:hover > a {
+  color: #E91E63;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+/* Mobile Menü */
+
+#mobile-nav-toggle {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 20px 20px 0 0;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+  cursor: pointer;
+}
+
+#mobile-nav-toggle i {
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  #mobile-nav-toggle {
+    display: inline;
+  }
+}
+
+/* Mobile Stillendirme */
+
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: #0c2e8a;
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+  background: linear-gradient(45deg, #E91E63 -200%, #0c2e8a 100%);
+}
+
+#mobile-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav ul li {
+  position: relative;
+}
+
+#mobile-nav ul li a {
+  color: #fffc;
+  font-size: 16px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav ul li a:hover {
+  color: #fff;
+}
+
+#mobile-nav ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+  color: #E91E63;
+}
+
+#mobile-nav ul .menu-item-active {
+  color: #E91E63;
+}
+
+#mobile-body-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(13, 13, 13, 0.9);
+  display: none;
+}
+
+/* Mobile Sınıflandırma */
+
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+  color: #fff;
+}
